@@ -8,6 +8,8 @@ c:\users\samir\desktop\laba4\include\d_heap.h(242): warning C4244: +=: прео�
   ..\..\samples\heapsort.cpp(11): note: см. ссылку на создание экземпляров класса шаблон при компиляции "DHeap<float>"
 c:\users\samir\desktop\laba4\include\d_heap.h(254): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
   Создание кода
-  All 30 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  1 of 30 functions ( 3.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   sample_sort.vcxproj -> C:\Users\Samir\Desktop\laba4\sln\Release\sample_sort.exe

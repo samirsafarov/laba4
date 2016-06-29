@@ -19,6 +19,8 @@ C:\Users\Samir\Desktop\laba4\src\algoritms.cpp(90): warning C4244: =: преоб
 C:\Users\Samir\Desktop\laba4\src\algoritms.cpp(99): warning C4244: =: преобразование "int" в "typ", возможна потеря данных
 C:\Users\Samir\Desktop\laba4\src\algoritms.cpp(74): warning C4101: pyt: неиспользованная локальная переменная
   Создание кода
-  All 31 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 31 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    9 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   sample_deykstra.vcxproj -> C:\Users\Samir\Desktop\laba4\sln\Release\sample_deykstra.exe
