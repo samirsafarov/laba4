@@ -1,0 +1,24 @@
+﻿  deykstra.cpp
+..\..\samples\deykstra.cpp(53): warning C4244: =: преобразование "int" в "typ", возможна потеря данных
+C:\Users\Samir\Desktop\laba4\include\graphs.h(122): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  C:\Users\Samir\Desktop\laba4\include\graphs.h(116): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  ..\..\samples\deykstra.cpp(31): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void Graph<typ>::createGraph(HType,HType)"
+          with
+          [
+              HType=typ
+          ]
+  ..\..\samples\deykstra.cpp(18): note: см. ссылку на создание экземпляров класса шаблон при компиляции "Graph<typ>"
+C:\Users\Samir\Desktop\laba4\src\algoritms.cpp(90): warning C4244: =: преобразование "typ" в "int", возможна потеря данных
+  C:\Users\Samir\Desktop\laba4\src\algoritms.cpp(45): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  ..\..\samples\deykstra.cpp(55): note: см. ссылку на создание экземпляров функции шаблон при компиляции "typ *Algoritm<typ>::deykstra(int,TType *&,Graph<typ> *&)"
+          with
+          [
+              TType=typ
+          ]
+  ..\..\samples\deykstra.cpp(55): note: см. ссылку на создание экземпляров класса шаблон при компиляции "Algoritm<typ>"
+C:\Users\Samir\Desktop\laba4\src\algoritms.cpp(99): warning C4244: =: преобразование "int" в "typ", возможна потеря данных
+C:\Users\Samir\Desktop\laba4\src\algoritms.cpp(74): warning C4101: pyt: неиспользованная локальная переменная
+  Создание кода
+  All 31 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  sample_deykstra.vcxproj -> C:\Users\Samir\Desktop\laba4\sln\Release\sample_deykstra.exe

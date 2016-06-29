@@ -1,23 +1,23 @@
 #include "algoritms.h"
 
 template <class TType>
-Graph<TType>* Algoritm<TType>::kruskal (Graph<TType>*& gr, PQueue<TType>*& queue)
+Graph<TType>* Algoritm<TType>::kruskal(Graph<TType>*& gr, PQueue<TType>*& queue)
 {
 	int n = gr->getKolvo();
 	int m = gr->getRealSize();
-	Graph<TType> *tree = new Graph<TType>(n,m);
+	Graph<TType> *tree = new Graph<TType>(n, m);
 	sets<TType> *set = new sets<TType>(n);
-	for (int i=0; i<n; i++)
+	for (int i = 0; i<n; i++)
 		set->makesets(i);
-	
-	for (int i=0; i<m;i++)
+
+	for (int i = 0; i<m;i++)
 		queue->push(gr->getEdge(i)->weight);
 
-	int treeEdgeSize = 0; 
+	int treeEdgeSize = 0;
 	int x = 0;
 	TType tmp;
 
-	while (treeEdgeSize < n-1)
+	while (treeEdgeSize < n - 1)
 	{
 		tmp = queue->top();
 		queue->pop();
@@ -41,23 +41,23 @@ Graph<TType>* Algoritm<TType>::kruskal (Graph<TType>*& gr, PQueue<TType>*& queue
 };
 
 template <class TType>
-TType* Algoritm<TType>::deykstra (int s, TType *&P, Graph<TType>*& gr)
+TType* Algoritm<TType>::deykstra(int s, TType *&P, Graph<TType>*& gr)
 {
 	int n = gr->getKolvo();
 	int m = gr->getRealSize();
 	if ((s < 0) || (s >= n))
-		throw 
-		exception ("Такой нет");
-	
+		throw
+		exception("Такой нет");
+
 	TType **graph = new TType*[n];
-	for (int i=0;i<n;i++)
+	for (int i = 0;i<n;i++)
 		graph[i] = new TType[n];
-	for (int i=0;i<n;i++)
-		for (int j=0;j<n;j++)
+	for (int i = 0;i<n;i++)
+		for (int j = 0;j<n;j++)
 			graph[i][j] = -1;
 
-	for (int i=0;i<n;i++)
-		for (int j=0;j<m;j++)
+	for (int i = 0;i<n;i++)
+		for (int j = 0;j<m;j++)
 		{
 			if ((gr->getEdge(j)->o == i) || (gr->getEdge(j)->k == i))
 			{
@@ -68,39 +68,40 @@ TType* Algoritm<TType>::deykstra (int s, TType *&P, Graph<TType>*& gr)
 
 	TType *dist = new TType[n]; //расстояние
 	int *vis = new int[n]; //массив посещенных вершин
-	for (int i=0; i<n;i++)
+	for (int i = 0; i<n;i++)
 		vis[i] = -1;
 	vis[0] = s;
 	int pyt;
 	int w, min;
-//////////////////////////////////////////////////////////////
-	for (int i=0; i<n; i++) 
-	{                       
-		if (graph[s][i] == -1)
-			dist[i]=MAX_HTYPE;
-			else dist[i]=graph[s][i];
-	}
-	for (int i=1; i<n-1; i++) 
+	//////////////////////////////////////////////////////////////
+	for (int i = 0; i<n; i++)
 	{
-		min=MAX_HTYPE;
-		for (int k=0; k<n; k++) {
-			if (dist[k] < min && k!=s && !gr->visit(k, vis) ) 
+		if (graph[s][i] == -1)
+			dist[i] = MAX_HTYPE;
+		else dist[i] = graph[s][i];
+	}
+	for (int i = 1; i<n - 1; i++)
+	{
+		min = MAX_HTYPE;
+		for (int k = 0; k<n; k++) {
+			if (dist[k] < min && k != s && !gr->visit(k, vis))
 			{
-				w=k;
-				min=dist[k];
+				w = k;
+				min = dist[k];
 			}
 		}
 		if (min == MAX_HTYPE) break;
-		vis[i]=w;
-		for (int j=0; j < n; j++) {
-			if (!gr->visit(j,vis) && graph[w][j] != -1 && (dist[w]+graph[w][j])<=dist[j]) 
+		vis[i] = w;
+		for (int j = 0; j < n; j++) {
+			if (!gr->visit(j, vis) && graph[w][j] != -1 && (dist[w] + graph[w][j]) <= dist[j])
 			{
-				P[j]=w;
-				dist[j]=dist[w]+graph[w][j];
+
+				P[j] = w;
+				dist[j] = dist[w] + graph[w][j];
 			}
 		}
 	}
-
+	P[s] = -1;
 	dist[s] = 0;
 	return dist;
 }

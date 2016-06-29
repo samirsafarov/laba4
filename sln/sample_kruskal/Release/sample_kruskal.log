@@ -1,0 +1,27 @@
+﻿  kruskal.cpp
+c:\users\samir\desktop\laba4\include\graphs.h(122): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  c:\users\samir\desktop\laba4\include\graphs.h(116): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  ..\..\samples\kruskal.cpp(38): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void Graph<typ>::createGraph(HType,HType)"
+          with
+          [
+              HType=typ
+          ]
+  ..\..\samples\kruskal.cpp(25): note: см. ссылку на создание экземпляров класса шаблон при компиляции "Graph<typ>"
+c:\users\samir\desktop\laba4\include\priority_queue.h(122): warning C4373: TQueue<TType>::push: виртуальная функция переопределяет "PQueue<typ>::push", предыдущие версии компилятора не выполняли переопределение, когда параметры отличались только квалификаторами const или volatile
+          with
+          [
+              TType=typ
+          ]
+  c:\users\samir\desktop\laba4\include\priority_queue.h(15): note:  см. объявление "PQueue<typ>::push"
+  c:\users\samir\desktop\laba4\include\priority_queue.h(204): note: см. ссылку на создание экземпляров класса шаблон при компиляции "TQueue<TType>"
+          with
+          [
+              TType=typ
+          ]
+  c:\users\samir\desktop\laba4\include\priority_queue.h(191): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  ..\..\samples\kruskal.cpp(90): note: см. ссылку на создание экземпляров функции шаблон при компиляции "bool make_queue<typ>::makeQueue(PQueue<typ> *&,const int,const int)"
+  ..\..\samples\kruskal.cpp(90): note: см. ссылку на создание экземпляров класса шаблон при компиляции "make_queue<typ>"
+  Создание кода
+  All 122 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  sample_kruskal.vcxproj -> C:\Users\Samir\Desktop\laba4\sln\Release\sample_kruskal.exe

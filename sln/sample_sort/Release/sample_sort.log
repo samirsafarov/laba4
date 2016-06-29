@@ -1,0 +1,13 @@
+﻿  heapsort.cpp
+..\..\samples\heapsort.cpp(16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+..\..\samples\heapsort.cpp(19): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+..\..\samples\heapsort.cpp(20): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\samir\desktop\laba4\include\d_heap.h(242): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+  c:\users\samir\desktop\laba4\include\d_heap.h(238): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  ..\..\samples\heapsort.cpp(24): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void DHeap<float>::vyvod(void)"
+  ..\..\samples\heapsort.cpp(11): note: см. ссылку на создание экземпляров класса шаблон при компиляции "DHeap<float>"
+c:\users\samir\desktop\laba4\include\d_heap.h(254): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+  Создание кода
+  All 30 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  sample_sort.vcxproj -> C:\Users\Samir\Desktop\laba4\sln\Release\sample_sort.exe

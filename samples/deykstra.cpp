@@ -2,7 +2,7 @@
 #include "priority_queue.h"
 #include "algoritms.cpp"
 
-typedef int typ;
+typedef float typ;
 
 void main()
 {
@@ -15,39 +15,58 @@ void main()
 	cout << "Введите количество ребер" << endl;
 	int m;
 	cin >> m;
-	Graph<typ> *graph = new Graph<typ> (n,m);
-		typ *P = new typ(n); //кратчайший путь
-		for (int i=0; i<=n;i++)
-			P[i] = 0;
-	cout << "Будем генерировать граф" << endl;
-	cout << "Введите минимальное и максимальное значение веса графа" << endl;
-	typ min, max;
-	cin >> min;
-	cin >> max;
-	graph->createGraph(min, max);
-	system ("cls");
-	
-	cout << "Получился вот такой вот граф: " << endl<<endl;
+	Graph<typ> *graph = new Graph<typ>(n, m);
+	typ *P = new typ[n]; //кратчайший путь
+	for (int i = 0; i <= n;i++)
+		P[i] = 0;
+	cout << "Генерируем граф" << endl;
+	int l;
+	cout << "Будем генерировать граф случайным образом (1) или вручную (2)?" << endl;
+	cin >> l;\
+		if (l == 1) {
+			cout << "Введите минимальное и максимальное значение веса графа, пожалуйста" << endl;
+			typ min, max;
+			cin >> min;
+			cin >> max;
+			graph->createGraph(min, max);
+			system("cls");
+		}
+	if (l == 2) {
+		for (int i = 0; i<m;i++)
+		{
+			cout << "Введите откуда, куда и вес" << endl;
+			int a, b;
+			typ c;
+			cin >> a;
+			cin >> b;
+			cin >> c;
+			graph->addEdge(a, b, c);
+		}
+	}
+	cout << "Получился вот такой граф: " << endl << endl;
 	graph->print();
 
-	cout << "Введите стартовую вершину" << endl;
+	cout << "Введите вершину, от которой начинаем" << endl;
 	int a;
-	cin >> a; 
-	typ *dist = Algoritm<typ>::deykstra(a,P, graph);
+	cin >> a;
+	for (int i = 0; i <= n;i++)
+		P[i] = a;
+	cout << "Применяем алгоритм... Пожалуйста, ожидайте" << endl << endl;
+	typ *dist = Algoritm<typ>::deykstra(a, P, graph);
 
-	cout << "Ответ: " << endl << endl;	
-	
-	for (int i=0; i<n;i++)
+	cout << "Ответ: " << endl << endl;
+
+	for (int i = 0; i<n;i++)
 		cout << i << ' ';
-	cout << "- номера вершин" <<  endl << endl;
+	cout << "- номера вершин" << endl << endl;
 	for (int i = 0; i < n; i++)
 		if (dist[i] == MAX_HTYPE)
 			cout << 0 << ' ';
 		else
-			cout << dist[i] << ' ' ;
-	cout << "- кратчайшие пути" <<  endl << endl;
-	for (int i=0;i<n;i++)
-			cout << P[i] << ' ';
-	cout << "- предшествующие вершины " <<  endl << endl;
+			cout << dist[i] << ' ';
+	cout << "- кратчайшие пути" << endl << endl;
+	for (int i = 0;i<n;i++)
+		cout << P[i] << ' ';
+	cout << "- предшествующие вершины " << endl << endl;
 
-}	
+}

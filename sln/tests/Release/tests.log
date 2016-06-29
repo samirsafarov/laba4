@@ -1,0 +1,19 @@
+﻿  test_bintree.cpp
+  test_dheap.cpp
+  test_graph.cpp
+C:\Users\Samir\Desktop\laba4\include\graphs.h(122): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  C:\Users\Samir\Desktop\laba4\include\graphs.h(116): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  ..\..\test\test_graph.cpp(24): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void Graph<int>::createGraph(HType,HType)"
+          with
+          [
+              HType=int
+          ]
+  ..\..\test\test_graph.cpp(5): note: см. ссылку на создание экземпляров класса шаблон при компиляции "Graph<int>"
+  test_main.cpp
+  test_queue.cpp
+  test_set.cpp
+  test_table.cpp
+  Создание кода
+  All 2840 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  tests.vcxproj -> C:\Users\Samir\Desktop\laba4\sln\Release\tests.exe
